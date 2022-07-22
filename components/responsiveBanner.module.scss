@@ -1,0 +1,27 @@
+.parallaxBanner {
+  position: relative;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .parallaxText {
+    position: absolute;
+    text-align: center;
+    
+    h3 {
+      color: white;
+      font-size: calc(1.5rem + 1.5vw);
+    }
+
+    h2 {
+      color: white;
+      font-size: calc(3rem + 2.5vw);
+    }
+  }
+
+
+  .parallaxImage {
+    filter: brightness(40%)
+  }
+}

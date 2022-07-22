@@ -1,21 +1,12 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import mypic from '../images/agency.jpg'
-import multiScreens from '../images/multi-screens.jpg'
 import Head from 'next/head'
 import styles from './index.module.scss'
-import Header from '../components/header'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faAnchor,
-  faHandshake,
-  faMaximize,
-  faServer,
-  faHouseCircleCheck,
-  faListOl,
-  faScrewdriverWrench
-} from "@fortawesome/free-solid-svg-icons";
+import Header from '../components/header'
+import LandingBanner from '../components/landingBanner'
+import Services from '../components/services'
+import ResponsiveBanner from '../components/responsiveBanner'
+import StepsToBuild from '../components/stepsToBuild'
 
 
 const Home: NextPage = () => {
@@ -28,121 +19,10 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className={styles.contentContainer}>
-        <section className={styles.coverImageContainer}>
-          <div className={styles.coverImageTextContainer}>
-              <h1>Agence Web à Annemasse</h1>
-              <p>
-                Nouvelle agence web à Annemasse, Locomoweb travaille avec les acteurs et business locaux pour répondre à leurs besoins numériques. Nous créons des sites web modernes, rapides et très bien référencés. 
-              </p>
-            </div>
-          <Image className={styles.coverImage} src={mypic} alt='agency' layout='fill' objectFit='cover' />
-        </section>
-        <section className={styles.services}>
-          <div className={styles.title}>
-            <h1>Nos Services</h1>
-            <p>Des préstations adaptées à vos besoins</p>
-          </div>
-          <div className={styles.cardsContainer}>
-            <div className={styles.leftColumn}>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faHandshake}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Rendez-vous en personne</h3>
-                    <p>Pour mieux vous accompagner dans vos projets numériques nous assurons des rendez-vous en personne afin de comprendre de façon précise vos besoins et vos attentes</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faServer}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Dernières technologies</h3>
-                    <p>Nous utilisons les dernières technologies en matière de dévelopement web afin de fournir à votre site internet un maximum de sécurité et de polyvalence.</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faHouseCircleCheck}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Une identité unique</h3>
-                    <p>Nous créons des sites internet sur mesure, en fonction de l&apos;identité propre du client : couleurs, images, police etc.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.rightColumn}>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                  <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faMaximize}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Design responsive</h3>
-                    <p>Nous créons votre site pour tous les types de support : téléphone, tablettes, ordinateurs portables, écrans de bureau.</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faListOl}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Référencement naturel</h3>
-                    <p>Grâce à notre expertise en référencement naturel, apparaissez dans les premiers des résultats de recherche, un atout majeur fâce à la concurrence</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardContainer}>
-                <div className={styles.logoPart}>
-                    <FontAwesomeIcon
-                      className={styles.logo}
-                      icon={faScrewdriverWrench}
-                    />
-                  </div>
-                  <div className={styles.textPart}>
-                    <h3>Assistance continue</h3>
-                    <p>Nous restons à vos côtés pour toute intervention immédiate sur vote site : modification de contenu, changements d&apos;images ou de textes</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className={styles.parallaxBanner}>
-          <Image className={styles.parallaxImage} src={multiScreens} alt='agency' layout='fill' objectFit='cover' />
-          <div className={styles.parallaxText}>
-            <h3>Compatible Mobile, tablettes et PC</h3>
-            <h2>Design Responsive</h2>
-          </div>
-        </section>
-        <section className={styles.timeLine}>
-
-        </section>
+        <LandingBanner />
+        <Services />
+        <ResponsiveBanner />
+        <StepsToBuild />
       </main>
     </div>
   )

@@ -1,0 +1,55 @@
+.mainContainer {
+  background: white;
+  position: relative;
+  height: calc(16rem + 6vw);
+
+  .stepsToBuildImage {
+    filter: brightness(40%);
+  }
+
+  .itemsContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .card {
+      text-align: center;
+
+      .cardContainer {
+        margin: 0 auto;
+        .logoPart {
+          width: fit-content;
+          margin: 0 auto;
+          border-radius: 50%;
+          background: white;
+          padding: calc(1rem + 1vw);
+          .logo {
+            font-size: calc(1rem + 2vw);
+          }
+        }
+
+        .textPart {
+          h3 {
+            padding: 1rem;
+            color: white;
+            letter-spacing: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    height: 130vh;
+    .itemsContainer {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

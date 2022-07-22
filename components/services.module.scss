@@ -1,0 +1,61 @@
+.services {
+  padding: calc(1rem + 1vw) 0;
+  .title {
+    text-align: center;
+    padding: calc(1rem + 2vw);
+
+    h1 {
+      font-size: calc(2rem + 2vw);
+    }
+
+    p {
+      font-size: calc(1.5rem + 1vw);
+      color: gray;
+    }
+  }
+
+  .cardsContainer {
+    width: 95%;
+    padding: calc(2rem + 0.5vw);
+    margin: 0 auto;
+    border-radius: 2rem;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .leftColumn, .rightColumn {
+      flex: 1;
+      min-width: 20rem;
+      .card {
+        width: 90%;
+        margin: 0 auto;
+        min-height: 6rem;
+
+        .cardContainer {
+          display: flex;
+
+          .logoPart {
+            display: flex;
+            width: 10%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 calc(0.6rem + 2vw);
+            font-size: calc(1rem + 1vw);
+            color: red;
+          }
+
+
+          .textPart {
+            h3 {
+              font-size: calc(1rem + 0.5vw);
+            }
+            p {
+              font-size: calc(1rem + 0.2vw);
+            }
+          }
+        }
+      }
+    }
+  }
+}
