@@ -18,7 +18,7 @@ import {
 const stepsToBuild = () => {
   return (
     <section className={styles.mainContainer}>
-      <Image className={styles.stepsToBuildImage} src={building} alt='agency' layout='fill' objectFit='cover' />
+      <Image className={styles.stepsToBuildImage} priority={true} src={building} alt='agency' layout='fill' objectFit='cover' />
       <div className={styles.itemsContainer}>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
