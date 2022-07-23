@@ -1,0 +1,20 @@
+.mainContainer {
+  overflow: hidden;
+  display: flex;
+
+  span {
+    font-size: calc(1rem + 3vw);
+    white-space: nowrap;
+    letter-spacing: 1rem;
+    animation: slidingText 40s linear infinite;
+  }
+
+  @keyframes slidingText {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+}

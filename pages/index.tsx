@@ -6,6 +6,7 @@ import Header from '../components/header'
 import LandingBanner from '../components/landingBanner'
 import Services from '../components/services'
 import ResponsiveBanner from '../components/responsiveBanner'
+import SlidingStripe from '../components/slidingStripe'
 import StepsToBuild from '../components/stepsToBuild'
 
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <LandingBanner />
         <Services />
         <ResponsiveBanner />
+        <SlidingStripe />
         <StepsToBuild />
       </main>
     </div>

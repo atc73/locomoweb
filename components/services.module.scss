@@ -1,8 +1,9 @@
 .services {
+  background: white;
   padding: calc(1rem + 1vw) 0;
   .title {
     text-align: center;
-    padding: calc(1rem + 2vw);
+    padding: calc(1rem + 0.5vw) 0;
 
     h1 {
       font-size: calc(2rem + 2vw);
@@ -23,6 +24,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px;
 
     .leftColumn, .rightColumn {
       flex: 1;
@@ -34,14 +37,15 @@
 
         .cardContainer {
           display: flex;
+          padding: 1rem 0;
 
           .logoPart {
             display: flex;
             width: 10%;
             justify-content: center;
             align-items: center;
-            padding: 0 calc(0.6rem + 2vw);
-            font-size: calc(1rem + 1vw);
+            padding: 0 calc(3rem + 3vw) 0 0;
+            font-size: calc(2rem + 1vw);
             color: red;
           }
 
@@ -51,7 +55,7 @@
               font-size: calc(1rem + 0.5vw);
             }
             p {
-              font-size: calc(1rem + 0.2vw);
+              font-size: calc(1rem + 0.5vw);
             }
           }
         }

@@ -22,6 +22,7 @@
       .cardContainer {
         margin: 0 auto;
         .logoPart {
+          position: relative;
           width: fit-content;
           margin: 0 auto;
           border-radius: 50%;
@@ -30,6 +31,39 @@
           .logo {
             font-size: calc(1rem + 2vw);
           }
+        }
+
+        .logoPart1::before, .logoPart2::before, .logoPart3::before, .logoPart4::before, .logoPart5::before, .logoPart6::before {
+          position: absolute;
+          top: 0;
+          left: -1rem;
+          content: "1";
+          background: red;
+          width: calc(1.6rem + 1vw);
+          height: calc(1.6rem + 1vw);
+          border-radius: 50%;
+          color: white;
+          text-align: center;
+          line-height: calc(1.6rem + 1vw);
+          font-size: calc(1rem + 1vw);
+          font-weight: bold;
+        }
+
+        .logoPart2::before {
+          content: "2";
+        }
+
+        .logoPart3::before {
+          content: "3";
+        }
+        .logoPart4::before {
+          content: "4";
+        }
+        .logoPart5::before {
+          content: "5";
+        }
+        .logoPart6::before {
+          content: "6";
         }
 
         .textPart {

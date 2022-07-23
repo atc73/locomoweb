@@ -22,7 +22,7 @@ const stepsToBuild = () => {
       <div className={styles.itemsContainer}>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart1}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faMugSaucer}
@@ -35,7 +35,7 @@ const stepsToBuild = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart2}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faListCheck}
@@ -48,7 +48,7 @@ const stepsToBuild = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart3}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faPenToSquare}
@@ -61,7 +61,7 @@ const stepsToBuild = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart4}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faCode}
@@ -74,7 +74,7 @@ const stepsToBuild = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart5}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faKeyboard}
@@ -87,7 +87,7 @@ const stepsToBuild = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.cardContainer}>
-            <div className={styles.logoPart}>
+            <div className={`${styles.logoPart} ${styles.logoPart6}`}>
               <FontAwesomeIcon
                 className={styles.logo}
                 icon={faGlobe}
