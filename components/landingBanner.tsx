@@ -11,7 +11,7 @@ const landingBanner = () => {
           Nouvelle agence web à Annemasse, Locomoweb travaille avec les acteurs et business locaux pour répondre à leurs besoins numériques. Nous créons des sites web modernes, rapides et très bien référencés. 
         </p>
       </div>
-      <Image className={styles.coverImage} src={mypic} alt='agency' layout='fill' objectFit='cover' />
+      <Image className={styles.coverImage} src={mypic} alt='agency' priority={true} layout='fill' objectFit='cover' />
     </section>
   )
 }
