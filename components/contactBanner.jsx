@@ -18,6 +18,8 @@ const ContactBanner = (props) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
   
 
   function handleSubmit(event) {
@@ -158,5 +160,5 @@ const ContactBanner = (props) => {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyANhk1Ljy91hOdfbgyVzhYaOpSXRQO-Ejg',
+  apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
 })(ContactBanner);
