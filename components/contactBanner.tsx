@@ -13,14 +13,14 @@ import {
   faAt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ContactBanner = (props) => {
+const ContactBanner = (props: any) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
     console.log('name:', name);
     console.log('email:', email);
@@ -91,7 +91,7 @@ const ContactBanner = (props) => {
         >
           <Marker
             onClick={props.onMarkerClick}
-            name={'Current location'}
+            name ={'Current location'}
           />
           <InfoWindow onClose={props.onInfoWindowClose}></InfoWindow>
         </Map>
