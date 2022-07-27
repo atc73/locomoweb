@@ -1,7 +1,7 @@
 import headerStyles from './header.module.scss'
 import Link from "next/link"
 
-const header = () => {
+const Header = () => {
   return (
     <main className={headerStyles.mainContainer}>
       <div className={headerStyles.leftLogoDiv}>
@@ -26,4 +26,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header

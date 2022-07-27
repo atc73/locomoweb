@@ -78,12 +78,60 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .mainContainer {
-    height: 130vh;
+    height: 110vh;
     .itemsContainer {
       flex-direction: column;
       gap: 2rem;
     }
   }
 }
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (min-height: 950px) and (max-height: 1200px){
+  .mainContainer {
+    height: 120vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (min-height: 800px) and (max-height: 950px){
+  .mainContainer {
+    height: 135vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (min-height: 700px) and (max-height: 800px){
+  .mainContainer {
+    height: 155vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (min-height: 550px) and (max-height: 700px){
+  .mainContainer {
+    height: 185vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (max-height: 550px){
+  .mainContainer {
+    height: 240vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (max-height: 450px){
+  .mainContainer {
+    height: 290vh;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 830px) and (max-height: 350px){
+  .mainContainer {
+    height: 320vh;
+  }
+}
+
+
+
+
+
+

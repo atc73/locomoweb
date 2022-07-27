@@ -8,6 +8,7 @@ import Services from '../components/services'
 import ResponsiveBanner from '../components/responsiveBanner'
 import SlidingStripe from '../components/slidingStripe'
 import StepsToBuild from '../components/stepsToBuild'
+import ContactBanner from '../components/contactBanner'
 
 
 const Home: NextPage = () => {
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
         <ResponsiveBanner />
         <SlidingStripe />
         <StepsToBuild />
+        <ContactBanner />
       </main>
     </div>
   )

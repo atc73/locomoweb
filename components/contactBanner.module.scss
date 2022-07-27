@@ -1,0 +1,134 @@
+.mainContainer {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  padding: 2rem 0;
+  .locomowebDetails {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 33.3%;
+    .card {
+      display: flex;
+      padding: calc(0.5rem + 0.5vw);
+      margin: 0 calc(0.5rem + 1vw);
+      border-bottom: 1px solid rgb(202, 197, 197);
+      .logoPart {
+        width: calc(1rem + 2vw);
+        text-align: center;
+        padding-top: calc(0.2rem + 0.2vw);
+      }
+
+      .textPart {
+        h3 {
+          font-size: calc(1rem + 0.5vw);
+          letter-spacing: 2px;
+        }
+
+        p {
+          font-size: calc(1rem + 0.5vw);
+          color: gray;
+        }
+      }
+    }
+
+    .card:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .mapContainer {
+    flex-grow: 1;
+    min-width: 33.3%;
+    min-height: calc(20rem + 2vw);
+    position: relative;
+
+    .map {
+    }
+  }
+
+  .contactForm {
+    flex-grow: 1;
+    background: white;
+    .form {
+      .nameDiv, .emailDiv, .phoneDiv, .messageDiv {
+        background: blue;
+        display: flex;
+        margin: 1rem;
+
+        label {
+          display: block;
+          width: 5rem;
+          background: rgb(230, 228, 228);
+          text-align: center;
+          line-height: 5rem;
+        }
+
+        input::placeholder {
+          padding-left: calc(1rem + 0.3vw);
+          color: grey;
+        }
+
+        input:active {
+          border: none;
+          outline: none;
+        }
+
+        input {
+          width: 100%;
+          height: 5rem;
+          border: none;
+          outline: none;
+          padding-left: 2rem;
+          font-size: 1.2rem;
+          border: 1px solid rgb(230, 228, 228);
+        }
+
+        textarea:active {
+          border: none;
+          outline: none;
+        }
+
+        textarea {
+          font-size: 1.2rem;
+          display: block;
+          width: 100%;
+          height: calc(10rem + 2vw);
+          border: none;
+          outline: none;
+          padding: 1rem 0 0 1rem;
+          border: 1px solid rgb(230, 228, 228);
+        }
+      }
+
+      .nameDiv {
+        margin-top: 0;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: calc(0.3rem + 0.3vw) calc(0.5rem + 0.3vw);
+        background: red;
+        border: none;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .mainContainer {
+    flex-direction: column;
+
+    .locomowebDetails {
+      padding-bottom: 2rem;
+    }
+
+    .contactForm {
+      padding: 2rem 0;
+    }
+  }
+}

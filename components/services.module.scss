@@ -63,3 +63,13 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) {
+  .services {
+    .cardsContainer {
+     .leftColumn, .rightColumn {
+        min-width: 10rem;
+      }
+    }
+  }
+}

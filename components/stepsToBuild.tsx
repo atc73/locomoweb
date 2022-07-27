@@ -94,7 +94,7 @@ const stepsToBuild = () => {
               />
             </div>
             <div className={styles.textPart}>
-              <h3>MISE EN LIGNE</h3>
+              <h3>ONLINE</h3>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 .mainContainer {
   height: 5rem;
-  width: 100%;
   background: white;
   display: flex;
   justify-content: space-between;
@@ -11,7 +10,7 @@
     align-items: center;
 
     h1 {
-      margin: 0 calc(1rem + 5vw);
+      margin: 0 calc(0.2rem + 5vw);
       font-size: 3rem;
       color: black;
     }
