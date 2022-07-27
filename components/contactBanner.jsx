@@ -13,14 +13,14 @@ import {
   faAt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ContactBanner = (props: any) => {
+const ContactBanner = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   
 
-  function handleSubmit(event: any) {
+  function handleSubmit(event) {
     event.preventDefault();
     console.log('name:', name);
     console.log('email:', email);
