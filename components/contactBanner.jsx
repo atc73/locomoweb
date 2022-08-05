@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styles from './contactBanner.module.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+
+import emailjs from '@emailjs/browser';
 
 import {
   faLocationDot,
@@ -11,23 +13,33 @@ import {
   faClock,
   faUser,
   faAt,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 
 const ContactBanner = (props) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [user_name, setUserName] = useState('');
+  const [user_email, setUserEmail] = useState('');
+  const [user_phone, setUserPhone] = useState('');
+  const [user_message, setUserMessage] = useState('');
+  const [popUpMessage, setPopUpMessage] = useState('messagen')
 
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
+  const form = useRef();
   
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log('name:', name);
-    console.log('email:', email);
-    console.log('message:', message);
-  }
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_nnzg4wp', 'template_14lyxpe', form.current, 'B9aQDwOj4TD7EhHR6')
+      .then((result) => {
+        console.log(result.text);
+        setUserName('')
+        setUserEmail('')
+        setUserPhone('')
+        setUserMessage('')
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <section className={styles.mainContainer}>
@@ -99,7 +111,16 @@ const ContactBanner = (props) => {
         </Map>
       </div>
       <div className={styles.contactForm}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={popUpMessage === 'messageOn'
+                        ? styles.popUpMessage
+                        : `${styles.popUpMessage} ${styles.popUpMessageOff}`}>
+          <FontAwesomeIcon
+            className={styles.logo}
+            icon={faPaperPlane}
+          />
+          <h4>Message envoyé !</h4>
+        </div>
+        <form ref={form} className={styles.form} onSubmit={sendEmail}>
           <div className={styles.nameDiv}>
             <label htmlFor="name">
               <FontAwesomeIcon
@@ -108,11 +129,12 @@ const ContactBanner = (props) => {
               />
             </label>
             <input
-              id="name"
+              name="user_name"
               type="text"
-              value={name}
+              value={user_name}
               placeholder="Prénom / Nom"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setUserName(e.target.value)}
+              required
             />
           </div>
           <div className={styles.emailDiv}>
@@ -123,11 +145,12 @@ const ContactBanner = (props) => {
               />
             </label>
             <input
-              id="email"
+              name="user_email"
               type="email"
-              value={email}
+              value={user_email}
               placeholder="E-mail"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setUserEmail(e.target.value)}
+              required
             />
           </div>
           <div className={styles.phoneDiv}>
@@ -138,21 +161,22 @@ const ContactBanner = (props) => {
               />
             </label>
             <input
-              id="phone"
+              name="user_phone"
               type="phone"
-              value={phone}
+              value={user_phone}
               placeholder="Téléphone"
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setUserPhone(e.target.value)}
             />
           </div>
           <div className={styles.messageDiv}>
             <textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="user_message"
+              value={user_message}
+              onChange={(e) => setUserMessage(e.target.value)}
+              required
             />
           </div>
-          <button type="submit">ENVOYER</button>
+          <button type="submit" value="Send">ENVOYER</button>
         </form>
       </div>
     </section>
